@@ -1,0 +1,31 @@
+{
+    "name": "rumahsantri/santriasuh",
+    "config": {
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "htaccess-protect": false
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yussin R. Hidayat",
+            "email": "van.de.bugs@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ndebugs/fall": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "rumahsantri\\santriasuh\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ndebugs/fall"
+        }
+    ]
+}

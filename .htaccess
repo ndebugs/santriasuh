@@ -1,0 +1,6 @@
+php_value enable_post_data_reading Off
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !(\.png|\.jpg|\.gif|\.jpeg)$
+RewriteRule ^((?!index\.php).+)$ index.php [L,QSA]
