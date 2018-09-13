@@ -4,18 +4,17 @@ namespace rumahsantri\santriasuh\model\adapter;
 
 use ndebugs\fall\adapter\TypeAdaptable;
 use ndebugs\fall\annotation\DataTypeAdapter;
-use rumahsantri\santriasuh\model\ActivityForm;
+use rumahsantri\santriasuh\model\ActivityItem;
 
 /**
- * @DataTypeAdapter(ActivityForm::class)
+ * @DataTypeAdapter(ActivityItem::class)
  */
-class ActivityFormAdapter implements TypeAdaptable {
+class ActivityItemAdapter implements TypeAdaptable {
     
     public function unmarshall($value) {
-        $model = new ActivityForm();
+        $model = new ActivityItem();
         $model->setId($value['id']);
         $model->setTitle($value['title']);
-        $model->setContent($value['content']);
         
         return $model;
     }
@@ -23,8 +22,7 @@ class ActivityFormAdapter implements TypeAdaptable {
     public function marshall($value) {
         return [
             'id' => $value->getId(),
-            'title' => $value->getTitle(),
-            'content' => $value->getContent()
+            'title' => $value->getTitle()
         ];
     }
 }

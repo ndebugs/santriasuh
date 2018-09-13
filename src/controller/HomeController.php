@@ -12,6 +12,6 @@ class HomeController {
      * @RequestMap
      */
     public function view() {
-        
+        return '/';
     }
 }

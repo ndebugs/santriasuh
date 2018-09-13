@@ -1,6 +1,8 @@
 php_value enable_post_data_reading Off
 
+Header unset X-Powered-By
+
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} !(\.png|\.jpg|\.gif|\.jpeg)$
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.gif|\.jpg|\.jpeg|\.png)$
 RewriteRule ^((?!index\.php).+)$ index.php [L,QSA]
