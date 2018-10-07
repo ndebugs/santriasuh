@@ -12,7 +12,10 @@ use rumahsantri\santriasuh\model\ActivityList;
  */
 class ActivityListAdapter implements TypeAdaptable {
     
-    /** @Autowired(ActivityItemAdapter::class) */
+    /**
+     * @var ActivityItemAdapter
+     * @Autowired
+     */
     public $itemAdapter;
     
     public function unmarshall($value) {

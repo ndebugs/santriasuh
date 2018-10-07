@@ -14,7 +14,10 @@ use rumahsantri\santriasuh\model\ResponseMessage;
  */
 class ExceptionAdapter implements TypeAdaptable {
     
-    /** @Autowired(ResponseMessageAdapter::class) */
+    /**
+     * @var ResponseMessageAdapter
+     * @Autowired
+     */
     public $adapter;
     
     public function unmarshall($value) {

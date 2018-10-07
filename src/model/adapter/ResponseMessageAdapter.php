@@ -13,7 +13,10 @@ use rumahsantri\santriasuh\model\ResponseMessage;
  */
 class ResponseMessageAdapter implements TypeAdaptable {
     
-    /** @Autowired(ApplicationContext::class) */
+    /**
+     * @var ApplicationContext
+     * @Autowired
+     */
     public $context;
     
     public function unmarshall($value) {
