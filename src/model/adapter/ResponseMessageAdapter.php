@@ -2,16 +2,16 @@
 
 namespace rumahsantri\santriasuh\model\adapter;
 
-use ndebugs\fall\adapter\TypeAdaptable;
+use ndebugs\fall\adapter\ObjectTypeAdaptable;
 use ndebugs\fall\annotation\Autowired;
-use ndebugs\fall\annotation\DataTypeAdapter;
+use ndebugs\fall\annotation\TypeAdapter;
 use ndebugs\fall\context\ApplicationContext;
 use rumahsantri\santriasuh\model\ResponseMessage;
 
 /**
- * @DataTypeAdapter(ResponseMessage::class)
+ * @TypeAdapter(ResponseMessage::class)
  */
-class ResponseMessageAdapter implements TypeAdaptable {
+class ResponseMessageAdapter implements ObjectTypeAdaptable {
     
     /**
      * @var ApplicationContext
@@ -19,15 +19,23 @@ class ResponseMessageAdapter implements TypeAdaptable {
      */
     public $context;
     
-    public function unmarshall($value) {
+    /**
+     * @param mixed $value
+     * @return object
+     */
+    public function wrap($value) {
         
     }
     
-    public function marshall($value) {
+    /**
+     * @param ResponseMessage $value
+     * @return array
+     */
+    public function unwrap($value) {
         $data = $value->getData();
         if ($data) {
-            $dataAdapter = $this->context->getTypeAdapter(DataTypeAdapter::class, get_class($data));
-            $data = $dataAdapter ? $dataAdapter->marshall($data) : null;
+            $adapter = $this->context->getTypeAdapter(ObjectTypeAdaptable::class, get_class($data));
+            $data = $adapter ? $adapter->unwrap($data) : null;
         }
         
         return [

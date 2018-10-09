@@ -3,16 +3,16 @@
 namespace rumahsantri\santriasuh\model\adapter;
 
 use Exception;
-use ndebugs\fall\adapter\TypeAdaptable;
+use ndebugs\fall\adapter\ObjectTypeAdaptable;
 use ndebugs\fall\annotation\Autowired;
-use ndebugs\fall\annotation\DataTypeAdapter;
+use ndebugs\fall\annotation\TypeAdapter;
 use ndebugs\fall\web\HTTPInternalServerErrorException;
 use rumahsantri\santriasuh\model\ResponseMessage;
 
 /**
- * @DataTypeAdapter(Exception::class)
+ * @TypeAdapter(Exception::class)
  */
-class ExceptionAdapter implements TypeAdaptable {
+class ExceptionAdapter implements ObjectTypeAdaptable {
     
     /**
      * @var ResponseMessageAdapter
@@ -20,15 +20,23 @@ class ExceptionAdapter implements TypeAdaptable {
      */
     public $adapter;
     
-    public function unmarshall($value) {
+    /**
+     * @param mixed $value
+     * @return object
+     */
+    public function wrap($value) {
         
     }
     
-    public function marshall($value) {
+    /**
+     * @param Exception $value
+     * @return array
+     */
+    public function unwrap($value) {
         $error = !$value instanceof HTTPException ?
                 new HTTPInternalServerErrorException($value->getMessage(), $value) : $value;
         
         $message = ResponseMessage::error($error->getCode(), $error->getMessage());
-        return $this->adapter->marshall($message);
+        return $this->adapter->unwrap($message);
     }
 }

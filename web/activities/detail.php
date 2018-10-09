@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>ACTIVITIES</title>
-        <?php $f->js('/assets/jquery-3.3.1.min.js') ?>
+        <?php $f->js('/assets/js/jquery-3.3.1.min.js') ?>
     </head>
     <body>
         <p>This is ACTIVITY page</p>
@@ -64,7 +64,7 @@
                     if (!response.code) {
                         alert('Success!');
                     } else {
-                        alert('Fail!');
+                        alert('Error: ' + response.message);
                     }
                 });
             });
@@ -77,7 +77,7 @@
                     if (!response.code) {
                         alert('Success!');
                     } else {
-                        alert('Fail!');
+                        alert('Error: ' + response.message);
                     }
                 });
             });
