@@ -11,7 +11,6 @@ use ndebugs\fall\annotation\QueryParameter;
 use ndebugs\fall\annotation\Roles;
 use rumahsantri\santriasuh\model\ActivityForm;
 use rumahsantri\santriasuh\model\ActivityItem;
-use rumahsantri\santriasuh\model\ActivityList;
 use rumahsantri\santriasuh\model\ResponseMessage;
 
 /** @Controller("/api/activities") */
@@ -38,11 +37,11 @@ class ActivityServiceController {
      * @ResponseBody
      */
     public function getAll($index, $size) {
-        $data = new ActivityList([
+        $data = [
             new ActivityItem(1, 'Activity 1'),
             new ActivityItem(2, 'Activity 2'),
             new ActivityItem(3, 'Activity 3')
-        ]);
+        ];
         
         return ResponseMessage::success($data);
     }

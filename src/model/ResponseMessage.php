@@ -4,7 +4,7 @@ namespace rumahsantri\santriasuh\model;
 
 class ResponseMessage {
     
-    /** @var string */
+    /** @var integer */
     private $code;
     
     /** @var string */
@@ -14,7 +14,7 @@ class ResponseMessage {
     private $data;
     
     /**
-     * @param string $code
+     * @param integer $code
      * @param string $message
      * @param mixed $data
      */
@@ -24,13 +24,13 @@ class ResponseMessage {
         $this->data = $data;
     }
 
-    /** @return string */
+    /** @return integer */
     public function getCode() {
         return $this->code;
     }
 
     /**
-     * @param string $code
+     * @param integer $code
      * @return void
      */
     public function setCode($code) {
@@ -72,7 +72,7 @@ class ResponseMessage {
     }
     
     /**
-     * @param string $code
+     * @param integer $code
      * @param string $message [optional]
      * @return ResponseMessage
      */
