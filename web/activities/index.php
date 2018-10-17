@@ -43,16 +43,20 @@
             var tableBody = $('#table_body');
             $.getJSON('<?php echo $f->url('/api/activities') ?>')
                 .done(function(response) {
-                    var data = response.data;
-                    var url = '<?php echo $f->url('/activities') ?>';
-                    $.each(data, function(i, item) {
-                        var tr = $('<tr/>');
-                        tr.append('<td>' + item.id + '</td>');
-                        tr.append('<td>' + item.title + '</td>');
-                        tr.append('<td><a href="' + url + '/' + item.id + '">view</a></td>');
-                        
-                        tableBody.append(tr);
-                    });
+                    if (!response.code) {
+                        var data = response.data;
+                        var url = '<?php echo $f->url('/activities') ?>';
+                        $.each(data, function(i, item) {
+                            var tr = $('<tr/>');
+                            tr.append('<td>' + item.id + '</td>');
+                            tr.append('<td>' + item.title + '</td>');
+                            tr.append('<td><a href="' + url + '/' + item.id + '">view</a></td>');
+
+                            tableBody.append(tr);
+                        });
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
             });
             
             $('#form').submit(function(event) {

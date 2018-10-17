@@ -7,6 +7,7 @@ use ndebugs\fall\adapter\ObjectAdapter;
 use ndebugs\fall\adapter\ObjectTypeAdapter;
 use ndebugs\fall\annotation\Autowired;
 use ndebugs\fall\annotation\TypeAdapter;
+use ndebugs\fall\http\HTTPException;
 use ndebugs\fall\web\HTTPInternalServerErrorException;
 use rumahsantri\santriasuh\model\ResponseMessage;
 
