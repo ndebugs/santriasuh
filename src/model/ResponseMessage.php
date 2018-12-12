@@ -74,9 +74,10 @@ class ResponseMessage {
     /**
      * @param integer $code
      * @param string $message [optional]
+     * @param mixed $data [optional]
      * @return ResponseMessage
      */
-    public static function error($code, $message = null) {
-        return new ResponseMessage($code, $message, null);
+    public static function error($code, $message = null, $data = null) {
+        return new ResponseMessage($code, $message, $data);
     }
 }

@@ -2,15 +2,23 @@
 
 namespace rumahsantri\santriasuh\model;
 
+use ndebugs\fall\annotation\validation\NotEmpty;
+
 class ActivityForm {
     
     /** @var string */
     private $id;
     
-    /** @var string */
+    /**
+     * @var string
+     * @NotEmpty
+     */
     private $title;
     
-    /** @var string */
+    /**
+     * @var string
+     * @NotEmpty
+     */
     private $content;
     
     /** @return string */

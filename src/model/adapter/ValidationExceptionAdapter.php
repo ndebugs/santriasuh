@@ -2,18 +2,20 @@
 
 namespace rumahsantri\santriasuh\model\adapter;
 
-use Exception;
 use ndebugs\fall\adapter\ObjectAdapter;
 use ndebugs\fall\adapter\ObjectTypeAdaptable;
 use ndebugs\fall\annotation\Autowired;
 use ndebugs\fall\annotation\TypeAdapter;
 use ndebugs\fall\http\HTTPException;
+use ndebugs\fall\http\HTTPStatus;
+use ndebugs\fall\reflection\TypeResolver;
 use ndebugs\fall\reflection\type\Type;
+use ndebugs\fall\validation\ValidationException;
 use ndebugs\fall\web\HTTPInternalServerErrorException;
 use rumahsantri\santriasuh\model\ResponseMessage;
 
-/** @TypeAdapter(Exception::class) */
-class ExceptionAdapter implements ObjectTypeAdaptable {
+/** @TypeAdapter(ValidationException::class) */
+class ValidationExceptionAdapter implements ObjectTypeAdaptable {
     
     /**
      * @var ObjectAdapter
@@ -31,15 +33,19 @@ class ExceptionAdapter implements ObjectTypeAdaptable {
     }
     
     /**
-     * @param Exception $value
+     * @param ValidationException $value
      * @param Type $type [optional]
      * @return array
      */
     public function uncast($value, Type $type = null) {
-        $error = !$value instanceof HTTPException ?
-                new HTTPInternalServerErrorException($value->getMessage(), $value) : $value;
+        $data = [];
+        foreach ($value->getErrors() as $error) {
+            $validatable = $error->getValidatable();
+            $name = $error->getName();
+            $data[$name] = $validatable->getMessage($name, $error->getValue());
+        }
         
-        $message = ResponseMessage::error($error->getCode(), $error->getMessage());
+        $message = ResponseMessage::error(HTTPStatus::CODE_BAD_REQUEST, $value->getMessage(), $data);
         return $this->adapter->uncast($message);
     }
 }

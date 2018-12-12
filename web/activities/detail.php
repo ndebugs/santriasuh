@@ -15,11 +15,11 @@
                 </tr>
                 <tr>
                     <td>Title</td>
-                    <td><input id="title" name="title"></td>
+                    <td><input id="title" name="title"><label class="error" for="title"></label></td>
                 </tr>
                 <tr>
                     <td>Content</td>
-                    <td><textarea id="content" name="content"></textarea></td>
+                    <td><textarea id="content" name="content"></textarea><label class="error" for="content"></label></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -32,6 +32,12 @@
         <p>Click <a href="<?php echo $f->url('/') ?>">here</a> to go to HOME page.</p>
         <p>Click <a href="<?php echo $f->url('/activities') ?>">here</a> to go to ACTIVITIES page.</p>
     </body>
+    <style>
+        .error {
+            display: block;
+            color: red;
+        }
+    </style>
     <script>
         $(function() {
             $.getJSON(
@@ -54,6 +60,7 @@
                     var item = $(this);
                     data[item.attr('name')] = item.val();
                 });
+                form.find('label').text(null);
                 
                 $.ajax({
                     url: '<?php echo $f->url('/api/activities/' . $id) ?>',
@@ -63,6 +70,11 @@
                 }).done(function(response) {
                     if (!response.code) {
                         alert('Success!');
+                    } else if (response.data) {
+                        $.each(response.data, function(key, value) {
+                            var label = form.find('label[for=' + key + ']');
+                            label.text(value);
+                        });
                     } else {
                         alert('Error: ' + response.message);
                     }
