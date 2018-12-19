@@ -1,0 +1,11 @@
+#partners-carousel .carousel-indicators {
+    position: relative;
+}
+
+#partners-carousel .carousel-indicators li {
+    border: 1px solid #ccc;
+}
+
+#partners-carousel .carousel-indicators .active {
+    background-color: #777;
+}

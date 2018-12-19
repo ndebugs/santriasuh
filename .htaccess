@@ -2,7 +2,13 @@ php_value enable_post_data_reading Off
 
 Header unset X-Powered-By
 
+Options -Indexes
+
+ErrorDocument 403 /~ndebugs/santriasuh/error/403
+ErrorDocument 404 /~ndebugs/santriasuh/error/404
+ErrorDocument 500 /~ndebugs/santriasuh/error/500
+
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} !(\.css|\.js|\.gif|\.jpg|\.jpeg|\.png)$
+RewriteCond %{REQUEST_URI} !(/assets|/data/public)
 RewriteRule ^((?!index\.php).+)$ index.php [L,QSA]
