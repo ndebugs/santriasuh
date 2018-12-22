@@ -8,10 +8,11 @@
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
             <div class="col-md-3 mb-md-0 mb-3">
-                <h6 class="text-uppercase font-weight-bold">Kontak</h6>
+                <h6 class="text-uppercase font-weight-bold">Kontak Kami</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fa fa-phone mr-3"></i> (021) 4228064
+                    <a href="tel:+62214228064" target="_blank">
+                        <i class="fa fa-phone mr-3"></i> (021) 4228064
                     </a>
                 </p>
                 <p>
@@ -21,20 +22,20 @@
                 </p>
             </div>
             <div class="col-md-3 mb-md-0 mb-3">
-                <h6 class="text-uppercase font-weight-bold">Akun</h6>
+                <h6 class="text-uppercase font-weight-bold">Ikuti Kami</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="https://www.facebook.com/pages/category/Product-Service/Rumah-Santri-Indonesia-763811343816002/">
+                    <a href="https://www.facebook.com/Rumah-Santri-Indonesia-763811343816002/" target="_blank">
                         <i class="fa fa-facebook mr-3"></i> Rumah Santri Indonesia
                     </a>
                 </p>
                 <p>
-                    <a href="https://www.instagram.com/rumahsantriindonesia/">
+                    <a href="https://www.instagram.com/rumahsantriindonesia/" target="_blank">
                         <i class="fa fa-instagram mr-3"></i> rumahsantriindonesia
                     </a>
                 </p>
             </div>
         </div>
     </div>
-    <div class="footer-copyright text-center py-3">© 2018 Copyright: Rumah Santri Indonesia</div>
+    <div class="footer-copyright text-center py-3">&copy; 2018 Copyright: Rumah Santri Indonesia</div>
 </footer>
