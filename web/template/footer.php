@@ -1,5 +1,5 @@
 <footer class="page-footer font-small default-color-dark pt-4">
-    <div class="container-fluid text-center text-md-left">
+    <div class="container-fluid text-center text-md-left px-4">
         <div class="row">
             <div class="col-md-6 mt-md-0 mt-3">
                 <h6 class="text-uppercase font-weight-bold">Rumah Santri Indonesia</h6>
@@ -12,7 +12,7 @@
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <a href="tel:+62214228064" target="_blank">
-                        <i class="fa fa-phone mr-3"></i> (021) 4228064
+                        <i class="fa fa-phone mr-3"></i> (021) 422 8064
                     </a>
                 </p>
                 <p>
@@ -37,5 +37,5 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright text-center py-3">&copy; 2018 Copyright: Rumah Santri Indonesia</div>
+    <?php include('./web/template/footerCopyright.php') ?>
 </footer>
