@@ -4,9 +4,7 @@ Header unset X-Powered-By
 
 Options -Indexes
 
-ErrorDocument 403 /~ndebugs/santriasuh/error/403
-ErrorDocument 404 /~ndebugs/santriasuh/error/404
-ErrorDocument 500 /~ndebugs/santriasuh/error/500
+ErrorDocument 403 /santriasuh/index.php
 
 RewriteEngine on
 
