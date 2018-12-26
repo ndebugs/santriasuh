@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark default-color scrolling-navbar">
     <a class="navbar-brand py-0" href="<?php echo $f->url('/') ?>">
-        <img class="logo" src="<?php echo $f->url('/assets/images/logo-santriasuh.svg') ?>" height="30" alt="Santri Asuh logo">
+        <img class="logo" src="<?php echo $f->url('/assets/images/navbar_logo.svg') ?>" height="30" alt="Santri Asuh logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
             aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">

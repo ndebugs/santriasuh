@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="full-height">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,8 +26,8 @@
             </div>
         </header>
 
-        <main class="text-center px-5">
-            <div class="container-fluid">
+        <main class="text-center">
+            <div class="container">
                 <section class="mt-4">
                     <div class="row">
                         <div class="col-md-12">
@@ -43,6 +43,9 @@
                                 mollit anim id est laborum.</p>
                         </div>
                     </div>
+                </section>
+                
+                <section class="mt-4">
                     <div class="row card-deck">
                         <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
                             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
