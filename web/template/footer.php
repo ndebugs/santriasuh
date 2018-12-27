@@ -26,12 +26,12 @@
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <a href="https://www.facebook.com/Rumah-Santri-Indonesia-763811343816002/" target="_blank">
-                        <i class="fa fa-facebook mr-3"></i> Rumah Santri Indonesia
+                        <i class="fab fa-facebook mr-3"></i> Rumah Santri Indonesia
                     </a>
                 </p>
                 <p>
                     <a href="https://www.instagram.com/rumahsantriindonesia/" target="_blank">
-                        <i class="fa fa-instagram mr-3"></i> rumahsantriindonesia
+                        <i class="fab fa-instagram mr-3"></i> rumahsantriindonesia
                     </a>
                 </p>
             </div>
