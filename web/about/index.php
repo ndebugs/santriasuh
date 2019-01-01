@@ -26,8 +26,8 @@
             <div class="container py-5">
                 <div class="row mb-4 text-center">
                     <div class="col-md-12">
-                        <p><b>PROGRAM SANTRI ASUH</b> berdiri diatas dan untuk semua golongan.</p>
-                        <p><b>PROGRAM SANTRI ASUH</b> tidak berada dibawah naungan partai politik, atau pondok pesantren manapun.</p>
+                        <p><b>PROGRAM SANTRI ASUH</b> berdiri di atas dan untuk semua golongan.</p>
+                        <p><b>PROGRAM SANTRI ASUH</b> tidak berada di bawah naungan partai politik, atau pondok pesantren manapun.</p>
                         <p><b>PROGRAM SANTRI ASUH</b> sebuah pergerakan <i>non profit oriented</i> dan <i>non popularity minded</i>.</p>
                         <p><b>PROGRAM SANTRI ASUH</b> adalah sebuah refleksi pergerakan <i>uswah</i> yang bertujuan <i>mardhotillah</i>.</p>
                         <p><b>PROGRAM SANTRI ASUH</b> hak dan kewajiban muslim.</p>
