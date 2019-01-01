@@ -8,7 +8,6 @@
         <title>Rumah Santri Indonesia - Program Santri Asuh</title>
 
         <?php include('./web/template/links.php') ?>
-
         <?php $f->includeCSS('/assets/css/home-style.css') ?>
         <?php $f->includeCSS('/assets/owlcarousel/assets/owl.carousel.min.css') ?>
         <?php $f->includeCSS('/assets/owlcarousel/assets/owl.theme.default.min.css') ?>

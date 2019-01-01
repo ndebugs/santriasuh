@@ -1,0 +1,24 @@
+.accordion .card {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: 0 0;
+}
+
+.accordion .card:not(:first-of-type) {
+    border-top: 1px solid #e0e0e0;
+}
+
+.accordion .card .card-header {
+    border-bottom: 0;
+    background: 0 0;
+}
+
+.accordion .card .card-header .rotate-icon {
+    float: right;
+}
+
+.accordion .card .card-header a:not(.collapsed) .rotate-icon {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

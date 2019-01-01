@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
         <title>Rumah Santri Indonesia - Program Santri Asuh | <?php echo $activity->getTitle() ?></title>
+        
         <?php include('./web/template/links.php'); ?>
     </head>
 
@@ -42,7 +44,9 @@
                 <div class="mb-4"><?php echo $activity->getContent() ?></div>
             </div>
         </main>
+        
         <?php include('./web/template/footer.php') ?>
+        
         <?php include('./web/template/scripts.php') ?>
     </body>
 
