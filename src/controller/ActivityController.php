@@ -55,6 +55,24 @@ class ActivityController {
         $template->setParameter('pageSize', $size);
         $template->setParameter('pageCount', 100);
         
+        $recentActivities = [];
+        for ($i = 1; $i <= 3; $i++) {
+            $activity = new Activity();
+            $activity->setId($i);
+            $activity->setTitle('Title ' . $i);
+            $activity->setContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+            $activity->setCreatorId('Admin');
+            $activity->setCreationDate('19/08/2018');
+            
+            $category = new Category();
+            $category->setName('Any');
+            $category->setIconName('far fa-bookmark');
+            $activity->setCategory($category);
+            
+            $recentActivities[] = $activity;
+        }
+        $template->setParameter('recentActivities', $recentActivities);
+        
         return $template;
     }
 }
